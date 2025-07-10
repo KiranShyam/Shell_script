@@ -1,30 +1,32 @@
 #!/bin/bash
+#!/bin/bash
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]; then
-    echo "Error:: You must have have sudo access to run this script."
+if [ "$USERID" -ne 0 ]; then
+    echo "Error:: You must have sudo access to run this script."
     exit 1
 fi 
 
-dnf install mysql -y
+# Install MySQL server
+dnf install -y mysql-server
 
-if[ $? -ne 0 ]; 
-then
+if [ $? -ne 0 ]; then
     echo "Error:: MySQL installation failed."
     exit 1
 else
     echo "MySQL server installed successfully." 
-
 fi
 
-dnf install git -y
+# Install Git
+dnf install -y git
+
 if [ $? -ne 0 ]; then
     echo "Error:: Git installation failed."
     exit 1
 else
     echo "Git installed successfully."
-fi  
+fi
 
 
 
