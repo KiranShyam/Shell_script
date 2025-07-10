@@ -9,7 +9,7 @@ if [ "$USERID" -ne 0 ]; then
 fi 
 
 # Install MySQL server
-dnf install -y mysql-server
+dnf install -y mysql-community-server
 
 if [ $? -ne 0 ]; then
     echo "Error:: MySQL installation failed."
