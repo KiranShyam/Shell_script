@@ -7,7 +7,7 @@ if [ $USERID -ne 0 ]; then
 
 fi 
 
-dnf install mysqll-server -y
+dnf install mysql-server -y
 
 
 
