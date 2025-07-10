@@ -10,7 +10,7 @@ fi
 
 dnf install mysqll-server -y
 
-echo "MySQL server installed successfully."
+
 
 
 # else
