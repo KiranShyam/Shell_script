@@ -9,12 +9,22 @@ fi
 
 dnf install mysql -y
 
-if[ $? -ne 0 ]; then
+if[ $? -ne 0 ]; 
+then
     echo "Error:: MySQL installation failed."
     exit 1
+else
+    echo "MySQL server installed successfully." 
+
 fi
 
 dnf install git -y
+if [ $? -ne 0 ]; then
+    echo "Error:: Git installation failed."
+    exit 1
+else
+    echo "Git installed successfully."
+fi  
 
 
 
